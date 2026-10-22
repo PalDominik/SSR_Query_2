@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><strong><%= title %></strong></h1>
+        <ul>
+            <% expenses.forEach(elem => { %>
+                <li style=" background-color: <%= (elem.category == "food")? "yellow" : (elem.category == "utilites")? "blue" : (elem.category == "entertaimnet")? "green" : "brown" %>">Név: <%= elem.name %>, Költség: <%= elem.amount %>, Kategoria: <%= elem.category %>  </li>   
+            <% }); %>   
+        </ul>
+
+        <a href="/">Vissza az elágazásra</a>
+</body>
+</html>
